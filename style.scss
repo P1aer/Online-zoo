@@ -6,12 +6,13 @@ $grey:#F0F0F0;
 $dark-grey:#626262;
 $black:#0B0B0B;
 
+
 @mixin text($property) {
   width: $property;
 }
 .wrapper{
   padding-top: 25px;
-  max-width: $resolution -(2*69.5);
+  max-width: $resolution -(2*60);
   margin: 0 auto;
 }
 
@@ -21,6 +22,8 @@ $black:#0B0B0B;
 
 .header-box{
   background: $white;
+  margin-left: 10px;
+  height: 87px;
   margin-bottom: 52px;
   display: flex;
   flex-wrap: wrap;
@@ -29,11 +32,15 @@ $black:#0B0B0B;
 }
 
 .header-logo{
+  position: fixed;
+  left: 60px;
+  top: 25px;
   border-right:2px solid $grey;
   padding: 24px 18px 23px 18px;
+
 }
 .header-nav{
-  padding-left: 94px;
+  padding-left: 184px;
   padding-right: 672px;
 }
 .nav-list{
@@ -58,27 +65,43 @@ $black:#0B0B0B;
   line-height: 28px;
   color: $dark-blue;
 }
-.nav-link:hover {
+.nav-link:active {
   color: $aqua;
 }
 
-.nav-link:active {
+.nav-link:hover {
   opacity: .75;
 }
 
-
 .nav-about{
-  font-weight: 500;
+  font-family: 'Rubik', sans-serif;
+  font-style: normal;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 28px;
+  color: $dark-blue;
 }
-
+.active {
+  text-shadow: 1px 0 0 currentColor;
+  pointer-events: none;
+}
 .wrapper-main{
   max-width:$resolution -(2*242);
   margin: 0 auto;
 }
+.map{
+  color: $aqua;
+  font-family: 'Rubik', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 28px;
+}
 /* side-bar section*/
 .side-bar{
   position: fixed;
-  left: 68.5px;
+  left: 60px;
   top: 25px;
   background: $white;
 }
@@ -155,13 +178,13 @@ $black:#0B0B0B;
   max-width: 580px;
 }
 
+
 .watch-btn-watch{
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
   line-height: 21px;
-  text-align: center;
   color: #0F0049;
   padding: 20px 75px;
   border: 2px solid #0F0049;
@@ -169,7 +192,6 @@ $black:#0B0B0B;
   border-radius: 5px;
   background: none;
 }
-
 .watch-btn-zoo{
   padding: 20px 75px;
   background: #0F0049;
@@ -186,15 +208,17 @@ $black:#0B0B0B;
    background:#150068;
   border-color:#150068;
 }
+.watch-btn-watch:active{
+   color:$dark-blue;
+   border-color:$dark-blue;
+}
 .watch-btn-zoo:hover{
   background:$dark-blue;
   border-color:$dark-blue;
 }
-.watch-btn-watch:active{
-  border-color: #3888FF;
-}
 .watch-btn-watch:hover{
-  border-color: $dark-blue;
+  color: #3888FF;
+  border-color: #3888FF;
 }
 /*  How Zoo works    */
 .zoo-works-article{
@@ -388,6 +412,7 @@ $black:#0B0B0B;
   line-height: 26px;
   letter-spacing: 0.115em;
   color: #0B0B0B;
+  margin-bottom: 80px;
 }
 
 .pay-h3{
@@ -399,6 +424,10 @@ $black:#0B0B0B;
   line-height: 52px;
   color: #0F0049;
 }
+.safe-img{
+  width: 278px;
+  height: 214px;
+}
 .pay-section{
   display: flex;
   flex-wrap: wrap;
@@ -406,7 +435,7 @@ $black:#0B0B0B;
   max-width: 824px;
 }
 .pay-visa-article{
-  padding-top: 85px;
+  padding-top: 15px;
 }
 .pay-article-text{
   font-family: 'Rubik', sans-serif;
@@ -416,10 +445,9 @@ $black:#0B0B0B;
   line-height: 28px;
   max-width: 456px;
   color: #747474;
-
 }
 .pay-arrow1{
-  padding-top: 80px;
+  padding-top: 25px;
   padding-left: 100px;
 }
 .big-section{
@@ -427,7 +455,7 @@ $black:#0B0B0B;
   justify-content: flex-end;
 }
 .pay-delivery-article{
-  padding-top: 104px;
+  padding-top: 124px;
   padding-left: 56px;
 }
 .pay-arrow2{
@@ -439,6 +467,12 @@ $black:#0B0B0B;
 }
 .pay-dinner-article{
   padding-top: 41px;
+  margin-bottom: 155px;
+}
+.diner-image{
+  padding-left: 20px;
+  width: 312px;
+  height: 312px;
 }
 
 /*     Testimonials     */
@@ -695,8 +729,10 @@ $black:#0B0B0B;
   display: flex;
   flex-wrap: wrap;
   padding-top: 100px;
-  justify-content: space-between;
   border-bottom:1px solid #747474;
+}
+.footer-icons{
+  padding-right: 250px;
 }
 .footer-logo{
   margin-bottom: 192px;
@@ -707,6 +743,9 @@ $black:#0B0B0B;
   align-items: center;
   justify-content: space-between;
  width: 303px;
+}
+.footer-nav{
+  padding-right: 409px;
 }
 .footer-x{
   width: 9px;
@@ -779,7 +818,16 @@ $black:#0B0B0B;
   text-align: center;
   background: none;
   color: #FCFCFC;
-  margin-bottom: 85px;
+  margin-bottom: 80px;
+}
+.footer-socials{
+  color: #BCBCBC;
+  font-family: 'Rubik', sans-serif;
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
 }
 .footer-copyrights{
   padding-top: 50px;

@@ -1,6 +1,6 @@
 .wrapper {
   padding-top: 25px;
-  max-width: 1781px;
+  max-width: 1800px;
   margin: 0 auto;
 }
 
@@ -10,6 +10,8 @@
 
 .header-box {
   background: white;
+  margin-left: 10px;
+  height: 87px;
   margin-bottom: 52px;
   display: flex;
   flex-wrap: wrap;
@@ -18,12 +20,15 @@
 }
 
 .header-logo {
+  position: fixed;
+  left: 60px;
+  top: 25px;
   border-right: 2px solid #F0F0F0;
   padding: 24px 18px 23px 18px;
 }
 
 .header-nav {
-  padding-left: 94px;
+  padding-left: 184px;
   padding-right: 672px;
 }
 
@@ -50,16 +55,26 @@
   color: #080029;
 }
 
-.nav-link:hover {
+.nav-link:active {
   color: #D9E8FF;
 }
 
-.nav-link:active {
+.nav-link:hover {
   opacity: 0.75;
 }
 
 .nav-about {
-  font-weight: 500;
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 28px;
+  color: #080029;
+}
+
+.active {
+  text-shadow: 1px 0 0 currentColor;
+  pointer-events: none;
 }
 
 .wrapper-main {
@@ -67,10 +82,20 @@
   margin: 0 auto;
 }
 
+.map {
+  color: #D9E8FF;
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 28px;
+}
+
 /* side-bar section*/
 .side-bar {
   position: fixed;
-  left: 68.5px;
+  left: 60px;
   top: 25px;
   background: white;
 }
@@ -161,7 +186,6 @@
   font-weight: 500;
   font-size: 18px;
   line-height: 21px;
-  text-align: center;
   color: #0F0049;
   padding: 20px 75px;
   border: 2px solid #0F0049;
@@ -188,17 +212,19 @@
   border-color: #150068;
 }
 
+.watch-btn-watch:active {
+  color: #080029;
+  border-color: #080029;
+}
+
 .watch-btn-zoo:hover {
   background: #080029;
   border-color: #080029;
 }
 
-.watch-btn-watch:active {
-  border-color: #3888FF;
-}
-
 .watch-btn-watch:hover {
-  border-color: #080029;
+  color: #3888FF;
+  border-color: #3888FF;
 }
 
 /*  How Zoo works    */
@@ -413,6 +439,7 @@
   line-height: 26px;
   letter-spacing: 0.115em;
   color: #0B0B0B;
+  margin-bottom: 80px;
 }
 
 .pay-h3 {
@@ -425,6 +452,11 @@
   color: #0F0049;
 }
 
+.safe-img {
+  width: 278px;
+  height: 214px;
+}
+
 .pay-section {
   display: flex;
   flex-wrap: wrap;
@@ -433,7 +465,7 @@
 }
 
 .pay-visa-article {
-  padding-top: 85px;
+  padding-top: 15px;
 }
 
 .pay-article-text {
@@ -447,7 +479,7 @@
 }
 
 .pay-arrow1 {
-  padding-top: 80px;
+  padding-top: 25px;
   padding-left: 100px;
 }
 
@@ -457,7 +489,7 @@
 }
 
 .pay-delivery-article {
-  padding-top: 104px;
+  padding-top: 124px;
   padding-left: 56px;
 }
 
@@ -472,6 +504,13 @@
 
 .pay-dinner-article {
   padding-top: 41px;
+  margin-bottom: 155px;
+}
+
+.diner-image {
+  padding-left: 20px;
+  width: 312px;
+  height: 312px;
 }
 
 /*     Testimonials     */
@@ -757,8 +796,11 @@
   display: flex;
   flex-wrap: wrap;
   padding-top: 100px;
-  justify-content: space-between;
   border-bottom: 1px solid #747474;
+}
+
+.footer-icons {
+  padding-right: 250px;
 }
 
 .footer-logo {
@@ -771,6 +813,10 @@
   align-items: center;
   justify-content: space-between;
   width: 303px;
+}
+
+.footer-nav {
+  padding-right: 409px;
 }
 
 .footer-x {
@@ -852,7 +898,17 @@
   text-align: center;
   background: none;
   color: #FCFCFC;
-  margin-bottom: 85px;
+  margin-bottom: 80px;
+}
+
+.footer-socials {
+  color: #BCBCBC;
+  font-family: "Rubik", sans-serif;
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
 }
 
 .footer-copyrights {
