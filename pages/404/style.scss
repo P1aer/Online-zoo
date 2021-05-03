@@ -6,25 +6,26 @@ $grey:#F0F0F0;
 $dark-grey:#626262;
 $black:#0B0B0B;
 
+body::-webkit-scrollbar{
+  display: none;
+}
+
 @mixin text($property) {
   width: $property;
 }
-/*Header*/
 .wrapper{
-  padding-top: 25px;
-  max-width: $resolution -(2*60);
-  margin: 0 auto;
+  min-height: 100%;
 }
 
-.visual-hidden{
+.visual-hidden,.br-320{
   display: none;
 }
 
 .header-box{
+  padding-top: 28px;
   background: $white;
-  margin-left: 10px;
   height: 87px;
-  margin-bottom: 20px;
+  margin-bottom: 42px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -35,8 +36,8 @@ $black:#0B0B0B;
 
 }
 .header-nav{
-  padding-left: 93px;
-  padding-right: 758px;
+  padding-left: 97px;
+  padding-right: 760px;
 }
 .nav-list{
   display: flex;
@@ -60,14 +61,13 @@ $black:#0B0B0B;
   line-height: 28px;
   color: $dark-blue;
 }
-.nav-link:active,.fake-link:active  {
+.nav-link:active {
   color: $aqua;
 }
 
-.nav-link:hover,.fake-link:hover {
+.nav-link:hover {
   opacity: .75;
 }
-
 .nav-about{
   font-family: 'Rubik', sans-serif;
   font-style: normal;
@@ -80,7 +80,6 @@ $black:#0B0B0B;
   text-shadow: 1px 0 0 currentColor;
   pointer-events: none;
 }
-
 .wrapper-main{
   max-width:$resolution -(2*242);
   margin: 0 auto;
@@ -179,17 +178,16 @@ $black:#0B0B0B;
   background-color: black;
 }
 .wrapper-footer{
-  max-width: $resolution -(240*2);
+  max-width: $resolution -(233*2);
   margin: 0 auto;
 }
 .footer-container{
+  padding-left: 11px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   padding-top: 100px;
   border-bottom:1px solid #747474;
-}
-.footer-icons{
-  padding-right: 250px;
 }
 .footer-logo{
   margin-bottom: 192px;
@@ -200,9 +198,6 @@ $black:#0B0B0B;
   align-items: center;
   justify-content: space-between;
   width: 303px;
-}
-.footer-nav{
-  padding-right: 409px;
 }
 .footer-x{
   width: 9px;
@@ -305,4 +300,463 @@ $black:#0B0B0B;
 .footer-btn:hover{
   color: #3888FF;
   border-color: #3888FF;
+}
+
+@media (max-width: 1200px){
+  /*         HEADER         */
+  .header{
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .header-logo{
+    padding: 22px 0 16px 3px;
+  }
+  .header-box{
+    height: 70px;
+    margin: 0 auto 60px;
+    max-width: 1120px;
+  }
+  .nav-item{
+    padding-right: 100px;
+  }
+  .header-nav{
+    padding-left: 88px;
+    padding-right: 254px;
+  }
+  .header-profile{
+    height: 42px;
+    width: 42px;
+  }
+  /*        OOPS BLOCK                  */
+  .h3-oops{
+    font-size: 28px;
+    line-height: 145%;
+  }
+  .oops-section{
+    max-width: 651px;
+  }
+  .oops-section-text{
+    font-size: 18px;
+    line-height: 154%;
+    margin-bottom: 40px;
+  }
+  .txt-404{
+    width: 238px;
+    height: 151px;
+    font-size: 120px;
+    line-height: 151px;
+    left: 206px;
+    top: 0;
+  }
+  .oops-btn{
+    padding: 16px 60px;
+    margin-left: 195px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .video{
+    width: 832px;
+    height: 469px;
+  }
+  .oops-video{
+    padding: 80px 184px 60px 184px;
+    margin: 0;
+  }
+  .oops-sup-text{
+    font-size: 16px;
+    line-height: 154%;
+    padding-left: 387px;
+  }
+  /*        footer          */
+  .wrapper-footer{
+    margin: 0 40px;
+  }
+  .footer-container{
+    justify-content: normal;
+    padding:100px 65px 0 0;
+  }
+  .footer-logo{
+    width: 119px;
+    height: 91px;
+    padding-right: 178px;
+    margin-bottom: 103px;
+  }
+  .footer-nav{
+    padding-right: 280px;
+  }
+  .footer-school{
+    flex-direction: column;
+    width: 128px;
+    height: 176px;
+  }
+  .footer-h2{
+    font-size: 22px;
+    line-height: 26px;
+  }
+  .footer-volunteers-socials{
+    margin-bottom: 141px;
+  }
+  .footer-socials{
+    font-size: 22px;
+    line-height: 26px;
+  }
+  .footer-link{
+    font-size: 18px;
+    line-height: 154%;
+  }
+}
+@media (max-width: 640px) {
+  /*         HEADER         */
+  .header{
+    padding: 0 0 0 0;
+  }
+  .header-box{
+    z-index: 2;
+    justify-content: space-between;
+    height: 88px;
+    margin: 0 0 0 0;
+    width: 600px;
+    background: #FCFCFC;
+    border: none;
+    padding: 0 20px;
+    box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.04);
+  }
+  .nav-item{
+    padding-right: 100px;
+  }
+  .header-nav{
+    display: none;
+    padding-left: 144px;
+    padding-right: 182px;
+  }
+  .header-logo{
+    width: 49.28px;
+    height: 38px;
+    position: static;
+    padding: 0 0 0 0;
+  }
+  .header-profile{
+    content: url("../../assets/images/burger_menu.svg");
+    width: 55px;
+    height: 35px;
+  }
+  /*        OOPS BLOCK                  */
+  .h3-oops{
+    padding-top: 158px;
+    font-size: 26px;
+    line-height: 145%;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  .oops-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+  }
+  .oops-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    margin-bottom: 70px;
+  }
+  .oops-section-text{
+    font-size: 16px;
+    line-height: 154%;
+    margin-bottom: 35px;
+  }
+  .txt-404{
+    font-size: 96px;
+    line-height: 121px;
+    width: 191px;
+    height: 121px;
+    left: 190px;
+    top: 80px;
+  }
+  .oops-btn{
+    margin-left: 0;
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .video{
+    width: 600px;
+    height: 338px;
+  }
+  .oops-video{
+    padding: 0 0;
+    margin-bottom:40px ;
+  }
+  .oops-sup-text{
+    font-size: 14px;
+    line-height: 154%;
+    padding-left: 0;
+    margin-bottom: 60px;
+    text-align: center;
+  }
+  /*        footer          */
+  .wrapper-footer{
+    margin: 0 20px;
+  }
+  .footer-container{
+    padding:80px 0 0 0;
+    justify-content: normal;
+  }
+  .footer-nav{
+    padding-right: 77px;
+  }
+  .footer-logo{
+    padding-right: 0;
+    width: 95px;
+    height: 74px;
+    margin-right: 115px;
+    margin-bottom: 60px;
+  }
+  .footer-icons{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  .footer-yem{
+    width: 93px;
+    height: 49px;
+  }
+  .footer-rs{
+    width: 102px;
+    height: 38px;
+  }
+  .footer-school{
+    padding-top: 20px;
+    flex-direction: row;
+    width: 264px;
+    height: 49px;
+  }
+  .footer-h2{
+    font-size: 22px;
+    line-height: 26px;
+  }
+  .footer-nav{
+    padding-right: 70px;
+  }
+  .sup-h2{
+    margin-bottom: 30px;
+  }
+  .footer-sup-text{
+    font-size: 16px;
+    line-height: 154%
+  }
+  .footer-volunteers-socials{
+    margin-bottom: 120px;
+    width: 370px;
+  }
+  .footer-socials{
+    font-size: 18px;
+    line-height: 21px;
+  }
+  .footer-link{
+    font-size: 16px;
+    line-height: 154%;
+  }
+  .footer-btn{
+    margin-bottom: 50px;
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .h3-sub{
+    font-size: 14px;
+    line-height: 145%;
+  }
+  .footer-copyrights{
+    padding: 20px 0;
+  }
+}
+
+@media (max-width: 320px) {
+  .header{
+    padding: 0 0 0 0;
+  }
+  .header-box{
+    z-index: 2;
+    justify-content: space-between;
+    height: 59px;
+    margin: 0 0 0 0;
+    width: 300px;
+    background: #FCFCFC;
+    border: none;
+    padding: 0 10px;
+    box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.04);
+  }
+  .nav-item{
+    padding-right: 100px;
+  }
+  .header-nav{
+    display: none;
+    padding-left: 144px;
+    padding-right: 182px;
+  }
+  .header-logo{
+    position: static;
+    padding: 0 0 0 0;
+    width: 38px;
+    height: 29px;
+  }
+  .header-profile{
+    content: url("../../assets/images/burger_menu.svg");
+    width: 35px;
+    height: 21px;
+  }
+  /*        OOPS BLOCK                  */
+  .br-320{
+    display: block;
+  }
+  .h3-oops{
+    padding-top: 98px;
+    font-size: 20px;
+    line-height: 145%;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  .oops-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10px;
+  }
+  .oops-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 578px;
+    margin-bottom: 40px;
+  }
+  .oops-section-text{
+    font-size: 14px;
+    line-height: 154%;
+    margin-bottom: 25px;
+    max-width: 300px;
+  }
+  .txt-404{
+    font-size: 96px;
+    line-height: 121px;
+    width: 191px;
+    height: 121px;
+    left: 55px;
+    top: 21px;
+  }
+  .oops-btn{
+    margin-left: 0;
+    font-size: 14px;
+    line-height: 17px;
+  }
+  .video{
+    width: 300px;
+    height: 169px;
+  }
+  .oops-video{
+    padding: 0 0;
+    margin-bottom:30px ;
+  }
+  .oops-sup-text{
+    font-size: 12px;
+    line-height: 154%;
+    padding-left: 0;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+  /*        footer          */
+  .wrapper-footer{
+    margin: 0 10px;
+  }
+  .footer-container{
+    padding:60px 0 0 0;
+  }
+  .footer-logo{
+    width: 60px;
+    height: 47px;
+    margin-right: 100px;
+    margin-bottom: 80px;
+  }
+  .footer-nav{
+    padding-right: 0;
+  }
+  .footer-icons{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-bottom: 66px;
+  }
+  .footer-yem{
+    width: 80px;
+    height: 42px;
+  }
+  .footer-rs{
+    width: 84px;
+    height: 31px;
+  }
+  .footer-school{
+    flex-direction: column-reverse;
+    width: 84px;
+    height: 132px;
+  }
+  .footer-h2{
+    font-size: 18px;
+    line-height: 21px;
+  }
+  .sup-h2{
+    text-align: center;
+    font-size: 18px;
+    line-height: 21px;
+    margin-bottom: 30px;
+  }
+  .footer-sup-text{
+    font-size: 14px;
+    line-height: 154%;
+    text-align: center;
+    max-width: 300px;
+    margin-bottom: 30px;
+  }
+  .footer-volunteers-socials{
+    max-width: 300px;
+    margin-bottom: 36px;
+  }
+  .footer-socials{
+    font-size: 14px;
+    line-height: 17px;
+  }
+  .footer-link{
+    font-size: 14px;
+    line-height: 154%;
+  }
+  .footer-nav-item:first-child{
+    padding-bottom: 25px;
+  }
+  .footer-nav-item{
+    padding-bottom: 21px;
+  }
+  .footer-nav-item:last-child{
+    padding-bottom: 0;
+  }
+  .footer-volunteers-sup{
+    max-width: 300px;
+  }
+  .footer-btn{
+    padding: 20px 77px;
+    margin-bottom: 37px;
+    font-size: 13.5px;
+    line-height: 17px;
+    font-weight: 500;
+  }
+  .h3-sub{
+    font-size: 11px;
+    line-height: 145%;
+  }
+  .footer-copyrights{
+    flex-direction: column-reverse;
+    align-items: normal;
+    padding: 20px 0;
+  }
+  .ds-h3{
+    margin-bottom: 8px;
+  }
 }
